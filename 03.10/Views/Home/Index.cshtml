@@ -1,0 +1,27 @@
+﻿@model List<_03._10.Models.movies>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<form action="" method="post">
+    <input type="text" name="title" value="" placeholder="filmin adi" />
+    <input type="text" name="janr" value="" placeholder="janri" />
+    <input type="submit" name="add" value="elave et" />
+</form>
+
+
+@if(Model != null)
+{
+    foreach (var mov  in Model)
+    {
+
+        <div style="width:30%;float:left">
+            <span>@mov.title</span>
+            <span>@mov.janr</span>
+        </div>
+       
+    }
+}
